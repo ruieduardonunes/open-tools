@@ -43,7 +43,7 @@ function test2() {
   var hasCode = currentURL.search.substring(1);
 
   if (hasCode) {
-    var code = currentURL.searchParams.get("Code");
+    var code = currentURL.searchParams.get("code");
     console.log(code);
   }
 }
