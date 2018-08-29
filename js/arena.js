@@ -40,10 +40,9 @@ function test() {
 
 function test2() {
   var currentURL = window.location;
-  var code = currentURL.search.substring(1);
+  var hasCode = currentURL.search.substring(1);
 
-  console.log(code);
-  if (currentURL.search.substring(1)) {
+  if (hasCode) {
     var code = currentURL.searchParams.get("Code");
     console.log(code);
   }
