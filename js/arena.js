@@ -44,7 +44,7 @@ function test2() {
 
   if (hasCode) {
     var url = new URL(currentURL.href);
-    var code = currentURL.searchParams.get("code");
+    var code = url.searchParams.get("code");
     console.log(code);
   }
 }
