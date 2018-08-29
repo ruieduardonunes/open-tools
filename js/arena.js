@@ -32,18 +32,11 @@ function populatePage(data) {
 }
 
 function test() {
-  var authUrl =
-    "http://dev.are.na/oauth/authorize?client_id=f31a0e92d5d37d30d4f91ad349ff340d08e4f36e529c1d26ee0bb19aa7d59c5a&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code";
-  var options = {
-    method: "get",
-    headers: {
-      "Access-Control-Request-Headers": "*",
-      "Access-Control-Request-Method": "*"
-    }
-  };
-  fetch(authUrl, options)
+  fetch(
+    "http://dev.are.na/oauth/authorize?client_id=f31a0e92d5d37d30d4f91ad349ff340d08e4f36e529c1d26ee0bb19aa7d59c5a&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code"
+  )
     .then(function(response) {
-      return response.json();
+      return response;
     })
     .then(function(key) {
       var url =
