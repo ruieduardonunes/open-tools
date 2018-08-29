@@ -66,7 +66,10 @@ function getKey(code) {
     callback;
 
   fetch(url, {
-    method: "POST"
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    }
   })
     .then(res => res.json())
     .then(response => console.log("Success:", JSON.stringify(response)));
