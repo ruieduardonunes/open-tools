@@ -9,11 +9,11 @@ function loadData(channel) {
       return response.json();
     })
     .then(function(data) {
-      populatePage(data);
+      //populatePage(data);
     });
 }
 
-loadData(channel);
+//loadData(channel);
 
 function populatePage(data) {
   //console.log(data);
@@ -33,16 +33,16 @@ function populatePage(data) {
 
 function test() {
   fetch(
-    "http://dev.are.na/oauth/authorize?client_id=f31a0e92d5d37d30d4f91ad349ff340d08e4f36e529c1d26ee0bb19aa7d59c5a&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code"
+    "http://dev.are.na/oauth/authorize?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&redirect_uri=https://opentools.design/&response_type=code"
   )
     .then(function(response) {
       return response;
     })
     .then(function(key) {
       var url =
-        "https://dev.are.na/oauth/token?client_id=THE_ID&client_secret=c4e1fe4fbd30432bbdfa02e98537428d573e5a0841bdf95d3f8db1028b07762e&code=" +
+        "https://dev.are.na/oauth/token?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&client_secret=14af41a719258af9a23dd256b3e65314d9ed0d15caae0ee08a921241fa1d44d4&code=" +
         key +
-        "&grant_type=authorization_code&redirect_uri=urn:ietf:wg:oauth:2.0:oob";
+        "&grant_type=authorization_code&redirect_uri=https://opentools.design/";
       fetch(url, {
         method: "POST", // or 'PUT'
         headers: {
