@@ -44,7 +44,7 @@ function test2() {
 
   console.log(code);
   if (currentURL.search.substring(1)) {
-    var code = url.searchParams.get("Code");
-    console.log(c);
+    var code = currentURL.searchParams.get("Code");
+    console.log(code);
   }
 }
