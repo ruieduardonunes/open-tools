@@ -1,3 +1,5 @@
+window.onload = test2;
+
 var channel;
 
 //Delete
@@ -32,21 +34,17 @@ function populatePage(data) {
 }
 
 function test() {
-  // fetch(
-  //   "http://dev.are.na/oauth/authorize?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code"
-  // ).then(function(response) {
-  //   return response;
-  //   console.log(response);
-  // });
+  window.location =
+    "http://dev.are.na/oauth/authorize?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&redirect_uri=https://opentools.design/&response_type=code";
+}
 
-  const Http = new XMLHttpRequest();
-  const url =
-    "http://dev.are.na/oauth/authorize?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code";
-  Http.open("GET", url);
-  Http.send();
-  Http.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      console.log(Http.responseText);
-    }
-  };
+function test2() {
+  var currentURL = window.location;
+  var code = currentURL.search.substring(1);
+
+  console.log(code);
+  if (currentURL.search.substring(1)) {
+    var code = url.searchParams.get("Code");
+    console.log(c);
+  }
 }
