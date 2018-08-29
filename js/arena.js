@@ -49,7 +49,7 @@ function test2() {
   }
 }
 
-function getCode(code) {
+function getKey(code) {
   var url =
     "https://dev.are.na/oauth/token?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&client_secret=14af41a719258af9a23dd256b3e65314d9ed0d15caae0ee08a921241fa1d44d4&code=" +
     code +
