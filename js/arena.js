@@ -32,10 +32,10 @@ function populatePage(data) {
 }
 
 function test() {
-  window.location = fetch(
-    "https://dev.are.na/oauth/authorize?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&redirect_uri=https://opentools.design/&response_type=code",
-    { mode: "no-cors" }
+  fetch(
+    "http://dev.are.na/oauth/authorize?client_id=6ce6938e5e24c827fdb6acb55a92e1e006b165266ae2b1d6fc4cebd89aea81ce&redirect_uri=https://opentools.design/&response_type=code",
+    { mode: "cors" }
   ).then(function(response) {
-    return response.json();
+    return response;
   });
 }
