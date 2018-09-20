@@ -1,0 +1,93 @@
+html,
+body {
+  font-size: 10px;
+}
+
+h1 {
+  font-family: "freight-big-pro", serif;
+  font-size: 8.976372759879814em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 9rem;
+  margin-bottom: 2rem;
+  max-width: 64rem;
+}
+
+h3 {
+  font-family: "freight-big-pro", serif;
+  font-size: 5.0517352293136em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 6rem;
+  margin-bottom: 3rem;
+}
+
+h4 {
+  font-family: "ff-real-headline-pro", sans-serif;
+  font-size: 3.7897488591999995em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 1.3;
+  margin-bottom: 3rem;
+}
+
+h6 {
+  font-family: "ff-real-text-pro", sans-serif;
+  font-size: 2.1328em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  color: var(--silver);
+}
+
+p {
+  font-family: "ff-real-text-pro", sans-serif;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+a {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 400ms ease;
+  color: var(--black);
+}
+
+a:hover {
+  color: black;
+}
+
+/*Other styling*/
+
+#inclusivity:hover {
+  color: var(--blue);
+}
+
+#privacy:hover {
+  color: var(--orange);
+}
+
+#arena:hover {
+  color: var(--gold);
+}
+
+#featured:hover {
+  color: var(--rose);
+}
+
+#contribute:hover {
+  color: var(--green);
+}

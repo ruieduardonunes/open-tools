@@ -1,61 +1,121 @@
-html {
-  font-size: 1em;
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --grid: 8px;
+  /*Color*/
+  --backgroundColor: #fafafa;
+  --black: #000;
+  --silver: #a2a1a1;
+  --blue: #398bff;
+  --orange: #f77a37;
+  --rose: #cd6e8c;
+  --green: #91d9a7;
+  --gold: #ffd700;
 }
 
 body {
-  background-color: #fafafa;
-  font-family: "Usual", sans-serif;
-  font-weight: 400;
-  line-height: 1.45;
-  color: black;
+  background-color: var(--backgroundColor);
+  color: var(--black);
 }
 
-p {
-  margin-bottom: 1.3em;
+/*Template*/
+
+.content {
+  margin-bottom: 10vh;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
+.content-full {
+  width: 100%;
+  box-sizing: border-box;
 }
 
-h1 {
-  margin-top: 0;
-  font-size: 3.998em;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 2.827em;
-}
-
-h3 {
-  font-size: 1.999em;
-}
-
-h4 {
-  font-size: 1.414em;
-}
-
-small,
-.font_small {
-  font-size: 0.707em;
+.content-wrapper {
+  width: 100%;
+  padding: 0 12%;
+  box-sizing: border-box;
 }
 
 .row {
+  width: 100%;
+  box-sizing: border-box;
   display: inline-flex;
   flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: 90vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
 }
 
-#welcome-wrapper {
-  width: 80%;
-  margin: auto;
+.collumn {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.center * {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Navigation*/
+
+nav {
+  padding: calc(3 * var(--grid)) 0;
+  font-size: 2.1328em;
+  color: var(--silver);
+}
+
+nav a {
+  color: var(--silver);
+  font-family: "ff-real-text-pro", sans-serif;
+}
+
+/*Home Page*/
+
+#heroWelcome {
+  max-width: 56rem;
+  display: flex;
+  min-height: 48vh;
+  align-items: center;
+  align-content: center;
+}
+
+.collumn > div {
+  position: relative;
+}
+
+.channel-image {
+  width: calc(11 * var(--grid));
+  top: calc(2 * var(--grid));
+  position: absolute;
+}
+
+.image-right {
+  right: calc(-1 * (8 * var(--grid)));
+  left: auto;
+}
+
+.image-left {
+  left: calc(-1 * (12 * var(--grid)));
+  right: auto;
+}
+
+footer {
+  margin-bottom: 8rem;
+  margin-top: 24rem;
+}
+
+footer p {
+  color: var(--silver);
 }
