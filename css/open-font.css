@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "open-tools";
+  src: url("../fonts/open-tools.eot");
+  src: url("../fonts/open-tools.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/open-tools.woff") format("woff"),
+    url("../fonts/open-tools.ttf") format("truetype"),
+    url("../fonts/open-tools.svg#open-tools") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "open-tools" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="open-"]:before,
+[class*=" open-"]:before {
+  font-family: "open-tools" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: center;
+}
+
+.open-heart:before {
+  content: "\2665";
+  color: var(--blue);
+}
+.open-eye:before {
+  content: "\1f441";
+  color: var(--orange);
+}
+.open-add:before {
+  content: "\2795";
+  color: var(--rose);
+}
+.open-chat:before {
+  content: "\f4ac";
+  color: var(--green);
+}
+.open-star:before {
+  content: "\1f31f";
+  color: var(--gold);
+}

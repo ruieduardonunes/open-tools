@@ -12,6 +12,7 @@ h1 {
   line-height: 9rem;
   margin-bottom: 2rem;
   max-width: 64rem;
+  display: inline-block;
 }
 
 h3 {
@@ -81,11 +82,11 @@ a:hover {
 }
 
 #arena:hover {
-  color: var(--gold);
+  color: var(--rose);
 }
 
 #featured:hover {
-  color: var(--rose);
+  color: var(--gold);
 }
 
 #contribute:hover {

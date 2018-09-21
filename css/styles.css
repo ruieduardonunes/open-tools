@@ -71,7 +71,7 @@ body {
 /*Navigation*/
 
 nav {
-  padding: calc(3 * var(--grid)) 0;
+  padding: 24px 0;
   font-size: 2.1328em;
   color: var(--silver);
 }
@@ -96,13 +96,13 @@ nav a {
 }
 
 .channel-image {
-  width: calc(11 * var(--grid));
+  font-size: calc(11 * var(--grid));
   top: calc(2 * var(--grid));
   position: absolute;
 }
 
 .image-right {
-  right: calc(-1 * (8 * var(--grid)));
+  right: calc(-1 * (9 * var(--grid)));
   left: auto;
 }
 
