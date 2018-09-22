@@ -73,22 +73,22 @@ a:hover {
 
 /*Other styling*/
 
-#inclusivity:hover {
+.blue:hover {
   color: var(--blue);
 }
 
-#privacy:hover {
+.orange:hover {
   color: var(--orange);
 }
 
-#arena:hover {
+.rose:hover {
   color: var(--rose);
 }
 
-#featured:hover {
+.gold:hover {
   color: var(--gold);
 }
 
-#contribute:hover {
+.green:hover {
   color: var(--green);
 }

@@ -35,7 +35,6 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  vertical-align: center;
 }
 
 .open-heart:before {
@@ -57,4 +56,13 @@
 .open-star:before {
   content: "\1f31f";
   color: var(--gold);
+}
+.open-home:before {
+  content: "\1f3e0";
+  color: var(--green);
+}
+
+.open-email:before {
+  content: "\2709";
+  color: var(--blue);
 }
