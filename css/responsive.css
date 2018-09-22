@@ -9,4 +9,33 @@
   :root {
     --grid: calc(0.7 * (8px));
   }
+
+  .content-wrapper {
+    padding: 0 8%;
+  }
+
+  .channel {
+    transform: none;
+  }
+
+  .image-left {
+    transform: none;
+  }
+
+  .image-left div {
+    order: 2;
+  }
+
+  .channel h1 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  h4 {
+    font-size: 4.8em;
+  }
+
+  h6 {
+    font-size: 3.1328em;
+  }
 }

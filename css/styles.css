@@ -95,20 +95,33 @@ nav a {
   position: relative;
 }
 
-.channel-image {
+/* .channel-image {
   font-size: calc(11 * var(--grid));
   top: calc(2 * var(--grid));
   position: absolute;
+} */
+
+.channel {
+  justify-content: center;
+  transform: translateX(calc(5.5 * var(--grid)));
 }
 
-.image-right {
-  right: calc(-1 * (9 * var(--grid)));
-  left: auto;
+.channel * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.channel-image {
+  font-size: calc(11 * var(--grid));
+  width: calc(11 * var(--grid));
 }
 
 .image-left {
-  left: calc(-1 * (12 * var(--grid)));
-  right: auto;
+  transform: translateX(calc(-1 * (5.5 * var(--grid))));
+}
+
+.image-left div {
+  order: -1;
 }
 
 footer {
