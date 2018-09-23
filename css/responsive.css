@@ -16,6 +16,7 @@
 
   .channel {
     transform: none;
+    flex-wrap: wrap;
   }
 
   .image-left {
