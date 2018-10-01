@@ -1,0 +1,151 @@
+.title {
+  justify-content: flex-start;
+  margin-top: 8rem;
+}
+
+.title-image {
+  font-size: calc(11 * var(--grid));
+  width: calc(11 * var(--grid));
+}
+
+#channelDescription {
+  color: var(--silver);
+  max-width: 48rem;
+}
+
+.channel-meta p {
+  color: var(--silver);
+  margin-bottom: 0;
+}
+
+.channel-meta h6 {
+  color: var(--accentColor);
+  margin-top: 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 0.5px solid var(--lightGray);
+  margin-top: 6em;
+  margin-bottom: calc(8 * var(--grid));
+}
+
+.featured-links .collumn {
+  width: 22%;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.featured-links .collumn:first-child {
+  width: 48%;
+  order: 1;
+}
+
+.featured-links .collumn:last-child {
+  order: 2;
+}
+
+.featured-links .collumn div {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.featured-links .collumn img {
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+.featured-links .collumn div:last-child {
+  border-top: 0.5px solid var(--lightGray);
+  padding-top: 40px;
+}
+
+.featured-links #featured-hero img {
+  height: 56vh;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.featured-links .collumn p {
+  color: var(--silver);
+  margin-bottom: 8px;
+}
+
+.featured-links .collumn h3 {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.featured-links .collumn h6 {
+  margin: 0;
+  margin-bottom: 24px;
+  color: var(--black);
+}
+
+.featured-links #featured-hero div {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.featured-links #featured-hero {
+  border: none;
+  padding-top: 0;
+}
+
+.featured-links #featured-hero img {
+  height: 56vh;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.featured-links #featured-hero p {
+  color: var(--silver);
+  margin-bottom: 8px;
+}
+
+.featured-links #featured-hero h3 {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.featured-links #featured-hero h6 {
+  margin: 0;
+  margin-bottom: 24px;
+  color: var(--silver);
+}
+
+.link-wrapper {
+}
+
+.link-wrapper div {
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+.link-wrapper div img {
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+.link-wrapper div p {
+  color: var(--silver);
+  margin-bottom: 8px;
+}
+
+.link-wrapper div h3 {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.link-wrapper div h6 {
+  margin: 0;
+  margin-bottom: 24px;
+  color: var(--black);
+  text-transform: capitalize;
+}

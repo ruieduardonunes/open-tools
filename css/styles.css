@@ -8,9 +8,10 @@ body {
 :root {
   --grid: 8px;
   /*Color*/
-  --backgroundColor: #fafafa;
+  --backgroundColor: #fff;
   --black: #000;
   --silver: #a2a1a1;
+  --lightGray: #b4b3b3;
   --blue: #398bff;
   --orange: #f77a37;
   --rose: #cd6e8c;

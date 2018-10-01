@@ -39,4 +39,12 @@
   h6 {
     font-size: 3.1328em;
   }
+
+  .featured-links .collumn {
+    width: 100%;
+  }
+
+  .featured-links .collumn:first-child {
+    width: 100%;
+  }
 }
