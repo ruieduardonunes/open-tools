@@ -71,3 +71,27 @@ function populatePage(data) {
     container.appendChild(wrapper);
   }
 }
+
+el = document.getElementsByClassName("content-wrapper")[1];
+
+function isScrolledIntoView(el) {
+  var rect = el.getBoundingClientRect();
+  var elemTop = rect.top;
+  var elemBottom = rect.bottom;
+
+  // Only completely visible elements return true:
+  var isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+  // Partially visible elements return true:
+  //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+  return isVisible;
+}
+
+function isVisible() {
+  if (isScrolledIntoView) {
+    console.log("olazito");
+  } else {
+    console.log("adeusito");
+  }
+}
+
+document.onScroll = isVisible();

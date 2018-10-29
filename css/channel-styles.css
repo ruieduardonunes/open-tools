@@ -1,6 +1,7 @@
 .title {
   justify-content: flex-start;
   margin-top: 8rem;
+  padding-top: 80px;
 }
 
 .title-image {
@@ -53,12 +54,19 @@ hr {
 
 .featured-content h3 {
   margin-bottom: 1.8rem;
+  font-size: ;
 }
 
 .featured-content h6 {
-  color: var(--textColor);
+  color: var(--black);
   width: 72%;
   padding-left: 4px;
+}
+
+.featured-content #featured-link {
+  font-size: 1.8em;
+  font-family: "ff-real-text-pro", sans-serif;
+  color: var(--accentColor);
 }
 
 .link-wrapper {
@@ -67,6 +75,15 @@ hr {
 .link-wrapper div {
   width: 32vw;
   margin-bottom: 10vh;
+}
+
+.link-wrapper div a img {
+  transition: 400ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.link-wrapper div a:hover img {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.18);
+  transform: scale(1.16);
 }
 
 .link-wrapper div img {

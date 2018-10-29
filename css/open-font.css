@@ -43,7 +43,7 @@
 }
 .open-eye:before {
   content: "\1f441";
-  color: var(--orange);
+  color: var(--rose);
 }
 .open-add:before {
   content: "\2795";

@@ -75,6 +75,10 @@ nav {
   padding: 24px 0;
   font-size: 2.1328em;
   color: var(--silver);
+  position: fixed;
+  width: 100%;
+  background-color: var(--backgroundColor);
+  z-index: 3;
 }
 
 nav a {
@@ -90,6 +94,7 @@ nav a {
   min-height: 48vh;
   align-items: center;
   align-content: center;
+  padding-top: 80px;
 }
 
 .collumn > div {
@@ -128,7 +133,7 @@ nav a {
 
 footer {
   margin-bottom: 8rem;
-  margin-top: 24rem;
+  margin-top: 20rem;
 }
 
 footer p {
