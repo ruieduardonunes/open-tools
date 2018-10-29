@@ -30,117 +30,66 @@ hr {
   margin-bottom: calc(8 * var(--grid));
 }
 
-.featured-links .collumn {
-  width: 22%;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-}
-
-.featured-links .collumn:first-child {
+.featured-image {
   width: 48%;
-  order: 1;
+  height: 64vh;
+  background-size: cover;
+  background-position: center;
 }
 
-.featured-links .collumn:last-child {
-  order: 2;
+.featured-content {
+  width: 48%;
+  margin-left: 4%;
 }
 
-.featured-links .collumn div {
-  width: 100%;
-  margin-bottom: 40px;
+.featured-content p:first-child {
+  color: var(--accentColor);
 }
 
-.featured-links .collumn img {
-  width: 100%;
-  margin: 0 auto;
-  object-fit: cover;
-  border-radius: 1px;
-}
-
-.featured-links .collumn div:last-child {
-  border-top: 0.5px solid var(--lightGray);
-  padding-top: 40px;
-}
-
-.featured-links #featured-hero img {
-  height: 56vh;
-  width: 100%;
-  margin: 0 auto;
-  object-fit: cover;
-}
-
-.featured-links .collumn p {
+.featured-content p {
   color: var(--silver);
-  margin-bottom: 8px;
+  margin-top: 0;
 }
 
-.featured-links .collumn h3 {
-  margin: 0;
-  margin-bottom: 24px;
+.featured-content h3 {
+  margin-bottom: 1.8rem;
 }
 
-.featured-links .collumn h6 {
-  margin: 0;
-  margin-bottom: 24px;
-  color: var(--black);
-}
-
-.featured-links #featured-hero div {
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.featured-links #featured-hero {
-  border: none;
-  padding-top: 0;
-}
-
-.featured-links #featured-hero img {
-  height: 56vh;
-  max-width: 100%;
-  margin: 0 auto;
-  object-fit: cover;
-}
-
-.featured-links #featured-hero p {
-  color: var(--silver);
-  margin-bottom: 8px;
-}
-
-.featured-links #featured-hero h3 {
-  margin: 0;
-  margin-bottom: 24px;
-}
-
-.featured-links #featured-hero h6 {
-  margin: 0;
-  margin-bottom: 24px;
-  color: var(--silver);
+.featured-content h6 {
+  color: var(--textColor);
+  width: 72%;
+  padding-left: 4px;
 }
 
 .link-wrapper {
 }
 
 .link-wrapper div {
-  width: 30%;
-  margin-bottom: 40px;
+  width: 32vw;
+  margin-bottom: 10vh;
 }
 
 .link-wrapper div img {
-  width: 100%;
+  width: 10vw;
+  height: 10vw;
   margin: 0 auto;
   object-fit: cover;
   border-radius: 1px;
+  float: right;
 }
 
 .link-wrapper div p {
   color: var(--silver);
   margin-bottom: 8px;
+  margin-top: 0;
+  max-width: 20vw;
 }
 
 .link-wrapper div h3 {
   margin: 0;
   margin-bottom: 24px;
+  max-width: 20vw;
+  word-wrap: break-word;
 }
 
 .link-wrapper div h6 {
@@ -148,4 +97,6 @@ hr {
   margin-bottom: 24px;
   color: var(--black);
   text-transform: capitalize;
+  max-width: 20vw;
+  word-wrap: break-word;
 }
