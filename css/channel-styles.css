@@ -60,7 +60,6 @@ hr {
 .featured-content h6 {
   color: var(--black);
   width: 72%;
-  padding-left: 4px;
 }
 
 .featured-content #featured-link {
@@ -72,18 +71,76 @@ hr {
 .link-wrapper {
 }
 
+.spinner {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: var(--accentColor);
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
 .link-wrapper div {
   width: 32vw;
   margin-bottom: 10vh;
 }
 
-.link-wrapper div a img {
-  transition: 400ms cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.link-wrapper div a:hover img {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.18);
-  transform: scale(1.16);
+.link-wrapper div a:hover h6 {
+  text-decoration: underline;
 }
 
 .link-wrapper div img {

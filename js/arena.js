@@ -4,10 +4,14 @@ var channel;
 function loadData(channel) {
   fetch(root + channel)
     .then(function(response) {
+      if (response == 404) {
+        document.getElementById("loading").style.display = "none";
+      }
       return response.json();
     })
     .then(function(data) {
       populatePage(data);
+      document.getElementById("loading").style.display = "none";
     });
 }
 
