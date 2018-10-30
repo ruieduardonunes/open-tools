@@ -72,26 +72,19 @@ function populatePage(data) {
   }
 }
 
-el = document.getElementsByClassName("content-wrapper")[1];
+pageHero = document.getElementsByClassName("title")[0];
+pageTitle = document.getElementById("page-title");
+nav = document.getElementsByTagName("nav")[0];
 
-function isScrolledIntoView(el) {
-  var rect = el.getBoundingClientRect();
-  var elemTop = rect.top;
-  var elemBottom = rect.bottom;
-
-  // Only completely visible elements return true:
-  var isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
-  // Partially visible elements return true:
-  //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-  return isVisible;
-}
-
-function isVisible() {
-  if (isScrolledIntoView) {
-    console.log("olazito");
-  } else {
-    console.log("adeusito");
+window.onscroll = function() {
+  //TOP
+  if (pageHero.getBoundingClientRect().top <= 0) {
+    pageTitle.style.opacity = 0;
+    nav.style.borderBottom = "";
   }
-}
-
-document.onScroll = isVisible();
+  //BOTTOM
+  if (pageHero.getBoundingClientRect().bottom <= 0) {
+    pageTitle.style.opacity = 1;
+    nav.style.borderBottom = "1px solid #f2f2f2";
+  }
+};
