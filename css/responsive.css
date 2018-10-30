@@ -88,11 +88,12 @@
 
   nav {
     padding-left: 8%;
+    max-height: 60px;
   }
 
   nav a {
     font-size: 1.24em;
-    margin-right: 0.8em;
+    margin-right: 1.24em;
   }
 
   #page-title {

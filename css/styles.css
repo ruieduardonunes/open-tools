@@ -91,6 +91,11 @@ nav a {
   font-size: 0.8em;
 }
 
+#page-logo {
+  transition: 400ms ease;
+  width: auto;
+}
+
 #page-title {
   display: inline;
   font-size: 0.8em;
@@ -99,6 +104,7 @@ nav a {
   transition: opacity 400ms ease;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
 }
 
 /*Home Page*/
