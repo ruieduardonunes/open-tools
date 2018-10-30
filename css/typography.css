@@ -81,6 +81,26 @@ a:hover {
   color: black;
 }
 
+ol li {
+  font-family: "ff-real-text-pro", sans-serif;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+ol li ol li {
+  font-family: "ff-real-text-pro", sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
 /*Other styling*/
 
 .blue:hover {
