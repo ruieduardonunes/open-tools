@@ -18,6 +18,7 @@ function loadData(channel) {
 function populatePage(data) {
   var channelDescription = document.getElementById("channelDescription");
   var linkNumber = document.getElementById("linkNumber");
+  var collabNumber = document.getElementById("collabNumber");
 
   if (data.metadata.description) {
     channelDescription.innerHTML = data.metadata.description;
@@ -31,6 +32,7 @@ function populatePage(data) {
   console.log(data);
 
   collumn = document.getElementsByClassName("collumn");
+  var collaborators = [];
 
   for (let i = 0; i < data.contents.length; i++) {
     var container = document.getElementsByClassName("link-wrapper")[0];
@@ -39,6 +41,8 @@ function populatePage(data) {
     var par = document.createElement("p");
     var title = document.createElement("h6");
     var wrapper = document.createElement("div");
+
+    collaborators.push(data.contents[i].connected_by_user_slug);
 
     link.setAttribute("target", "_blank");
 
@@ -76,4 +80,17 @@ function populatePage(data) {
     wrapper.appendChild(link);
     container.appendChild(wrapper);
   }
+
+  var collabs = [];
+  var arr = collaborators.filter(function(el) {
+    // If it is not a duplicate, return true
+    if (collabs.indexOf(el) == -1) {
+      collabs.push(el);
+      return true;
+    }
+
+    return false;
+  });
+
+  collabNumber.innerHTML = collabs.length;
 }

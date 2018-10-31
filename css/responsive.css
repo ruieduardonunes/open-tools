@@ -15,7 +15,7 @@
   }
 
   .content-small {
-    max-width: 88%;
+    max-width: 96%;
   }
 
   .channel {
@@ -40,8 +40,22 @@
     font-size: 4.8em;
   }
 
+  h5 {
+    font-size: 3.2em;
+  }
+
   h6 {
     font-size: 3.1328em;
+  }
+
+  p {
+    font-size: 2.72em;
+    line-height: 1.5;
+  }
+
+  ol li {
+    font-size: 2.72rem;
+    line-height: 1.5;
   }
 
   .link-wrapper div {
@@ -102,5 +116,18 @@
 
   #page-title {
     font-size: 1.24em;
+  }
+
+  footer {
+    margin-bottom: 12rem;
+  }
+
+  footer a {
+    color: var(--silver);
+    font-size: 2.72em;
+  }
+
+  footer div:last-child {
+    margin-top: 2em;
   }
 }

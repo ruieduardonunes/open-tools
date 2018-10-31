@@ -7,6 +7,7 @@
 .title-image {
   font-size: calc(11 * var(--grid));
   width: calc(11 * var(--grid));
+  margin-left: 0.4em;
 }
 
 #channelDescription {
@@ -22,6 +23,10 @@
 .channel-meta h6 {
   color: var(--accentColor);
   margin-top: 0;
+}
+
+tr th:first-child {
+  padding-right: 24px;
 }
 
 hr {
@@ -157,6 +162,7 @@ hr {
   margin-bottom: 8px;
   margin-top: 0;
   max-width: 20vw;
+  font-size: 1.6em;
 }
 
 .link-wrapper div h3 {

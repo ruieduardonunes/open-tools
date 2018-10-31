@@ -66,3 +66,18 @@
   content: "\2709";
   color: var(--blue);
 }
+
+.open-coffee:before {
+  content: "\2615";
+  color: var(--rose);
+}
+
+.open-write:before {
+  content: "\1f58b";
+  color: var(--blue);
+}
+
+.open-lock:before {
+  content: "\1f512";
+  color: var(--gold);
+}
