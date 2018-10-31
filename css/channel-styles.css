@@ -23,10 +23,23 @@
 .channel-meta h6 {
   color: var(--accentColor);
   margin-top: 0;
+  display: inline;
 }
 
-tr th:first-child {
-  padding-right: 24px;
+.channel-meta h6:first-child {
+  margin-right: 1em;
+}
+
+td span[class="open-email"]::before {
+  color: var(--accentColor);
+}
+
+td span[class="open-star"]::before {
+  color: var(--accentColor);
+}
+
+tr th {
+  padding-right: 4em;
 }
 
 hr {
