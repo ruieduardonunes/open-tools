@@ -16,15 +16,15 @@ function loadData(channel) {
 }
 
 function populatePage(data) {
-  var channelDescription = document.getElementById("channelDescription");
   var linkNumber = document.getElementById("linkNumber");
   var collabNumber = document.getElementById("collabNumber");
 
-  if (data.metadata.description) {
-    channelDescription.innerHTML = data.metadata.description;
-  }
   if (data.length > 0) {
-    linkNumber.innerHTML = data.length;
+    if (data.length > 9) {
+      linkNumber.innerHTML = data.length;
+    } else {
+      linkNumber.innerHTML = "0" + data.length;
+    }
   }
 
   data.contents.reverse();
@@ -71,6 +71,8 @@ function populatePage(data) {
       image.style.backgroundColor = "var(--accentColor)";
     }
 
+    image.setAttribute("onload", "fadeImage(this)");
+
     par.innerHTML = "added by" + " " + data.contents[i].connected_by_username;
     title.innerHTML = data.contents[i].title;
 
@@ -92,5 +94,13 @@ function populatePage(data) {
     return false;
   });
 
-  collabNumber.innerHTML = collabs.length;
+  if (collabNumber.length > 9) {
+    collabNumber.innerHTML = collabs.length;
+  } else {
+    collabNumber.innerHTML = "0" + collabs.length;
+  }
+}
+
+function fadeImage(obj) {
+  obj.style.opacity = 1;
 }

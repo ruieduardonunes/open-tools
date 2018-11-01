@@ -97,6 +97,10 @@ nav a {
 
 #page-logo {
   transition: 400ms ease;
+  -webkit-transition: 400ms ease;
+  -moz-transition: 400ms ease;
+  -ms-transition: 400ms ease;
+  -o-transition: 400ms ease;
   width: auto;
 }
 
@@ -106,6 +110,10 @@ nav a {
   color: var(--accentColor);
   opacity: 0;
   transition: opacity 400ms ease;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
   padding: 0;
   margin: 0;
   white-space: nowrap;

@@ -74,6 +74,10 @@ a {
   text-decoration: none;
   cursor: pointer;
   transition: color 400ms ease;
+  -webkit-transition: color 400ms ease;
+  -moz-transition: color 400ms ease;
+  -ms-transition: color 400ms ease;
+  -o-transition: color 400ms ease;
   color: var(--black);
 }
 
