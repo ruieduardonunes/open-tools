@@ -13,6 +13,8 @@
 #channelDescription {
   color: var(--silver);
   max-width: 48rem;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
 }
 
 .channel-meta p {
@@ -168,6 +170,12 @@ hr {
   object-fit: cover;
   border-radius: 1px;
   float: right;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  -webkit-transition: opacity 1.6s ease;
+  -moz-transition: opacity 1.6s ease;
+  -ms-transition: opacity 1.6s ease;
+  -o-transition: opacity 1.6s ease;
 }
 
 .link-wrapper div p {
