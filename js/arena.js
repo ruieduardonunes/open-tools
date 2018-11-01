@@ -1,4 +1,4 @@
-var root = "http://api.are.na/v2/channels/";
+var root = "https://api.are.na/v2/channels/";
 var channel;
 
 function loadData(channel) {
