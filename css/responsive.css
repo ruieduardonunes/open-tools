@@ -1,0 +1,133 @@
+/*Responsive*/
+
+@media only screen and (min-width: 320px) and (max-width: 510px) {
+  html,
+  body {
+    font-size: calc(0.6 * 10px);
+  }
+
+  :root {
+    --grid: calc(0.7 * (8px));
+  }
+
+  .content-wrapper {
+    padding: 0 8%;
+  }
+
+  .content-small {
+    max-width: 96%;
+  }
+
+  .channel {
+    transform: none;
+    flex-wrap: wrap;
+  }
+
+  .image-left {
+    transform: none;
+  }
+
+  .image-left div {
+    order: 2;
+  }
+
+  .channel h1 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  h4 {
+    font-size: 4.8em;
+  }
+
+  h5 {
+    font-size: 3.2em;
+  }
+
+  h6 {
+    font-size: 3.1328em;
+  }
+
+  p {
+    font-size: 2.72em;
+    line-height: 1.5;
+  }
+
+  ol li {
+    font-size: 2.72rem;
+    line-height: 1.5;
+  }
+
+  .link-wrapper div {
+    width: 100%;
+  }
+
+  .link-wrapper div img {
+    width: 32vw;
+    height: 32vw;
+  }
+
+  .link-wrapper div p {
+    max-width: 50vw;
+    font-size: 2em;
+  }
+
+  .link-wrapper div h6 {
+    max-width: 40vw;
+    line-height: 1.3;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: 48vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .featured-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .featured-content p {
+    font-size: 2em;
+  }
+
+  .featured-content h3 {
+    margin-bottom: 1rem;
+    font-size: 6em;
+  }
+
+  .featured-content h6 {
+    line-height: 1.3;
+    padding-left: 0;
+    margin-top: 3rem;
+  }
+
+  nav {
+    padding-left: 8%;
+    max-height: 60px;
+  }
+
+  nav a {
+    font-size: 1.24em;
+    margin-right: 1.24em;
+  }
+
+  #page-title {
+    font-size: 1.24em;
+  }
+
+  footer {
+    margin-bottom: 12rem;
+  }
+
+  footer a {
+    color: var(--silver);
+    font-size: 2.72em;
+  }
+
+  footer div:last-child {
+    margin-top: 2em;
+  }
+}
