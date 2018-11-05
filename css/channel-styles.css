@@ -91,6 +91,16 @@ hr {
 .link-wrapper {
 }
 
+.load {
+  text-align: center;
+}
+
+#loadButton {
+  color: var(--accentColor);
+  text-align: center;
+  display: none;
+}
+
 .spinner {
   margin: 0 auto;
   width: 40px;
