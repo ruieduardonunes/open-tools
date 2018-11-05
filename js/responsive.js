@@ -3,7 +3,7 @@ pageTitle = document.getElementById("page-title");
 pageLogo = document.getElementById("page-logo");
 nav = document.getElementsByTagName("nav")[0];
 
-window.onscroll = function() {
+function navBarUpdate() {
   //TOP
   if (pageHero.getBoundingClientRect().top <= 0) {
     pageTitle.style.opacity = 0;
@@ -24,4 +24,8 @@ window.onscroll = function() {
     mobile(x);
     x.addListener(mobile);
   }
+}
+
+window.onscroll = function() {
+  navBarUpdate();
 };

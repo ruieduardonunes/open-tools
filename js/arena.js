@@ -1,23 +1,41 @@
 var root = "https://api.are.na/v2/channels/";
-var channel;
+var page = 0;
+var perPage = 8;
+var loaded = 1;
+var blocks;
+var currentChannel;
+var dataFile = {};
 
-function loadData(channel) {
+function getInfo(channel) {
+  currentChannel = channel;
   fetch(root + channel)
     .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      blocks = data.length;
+      loadData(data);
+    });
+}
+
+function loadData(data) {
+  document.getElementsByClassName("loading")[0].style.display = "block";
+
+  fetch(root + currentChannel + "?per=" + blocks)
+    .then(function(response) {
       if (response == 404) {
-        document.getElementById("loading").style.display = "none";
+        document.getElementsByClassName("loading")[0].style.display = "none";
       }
       return response.json();
     })
     .then(function(data) {
       populatePage(data);
-      document.getElementById("loading").style.display = "none";
+      document.getElementsByClassName("loading")[0].style.display = "none";
     });
 }
 
 function populatePage(data) {
   var linkNumber = document.getElementById("linkNumber");
-  var collabNumber = document.getElementById("collabNumber");
 
   if (data.length > 0) {
     if (data.length > 9) {
@@ -28,21 +46,17 @@ function populatePage(data) {
   }
 
   data.contents.reverse();
-
-  console.log(data);
+  dataFile = data;
 
   collumn = document.getElementsByClassName("collumn");
-  var collaborators = [];
 
-  for (let i = 0; i < data.contents.length; i++) {
+  for (let i = page; i < perPage; i++) {
     var container = document.getElementsByClassName("link-wrapper")[0];
     var link = document.createElement("a");
     var image = document.createElement("img");
     var par = document.createElement("p");
     var title = document.createElement("h6");
     var wrapper = document.createElement("div");
-
-    collaborators.push(data.contents[i].connected_by_user_slug);
 
     link.setAttribute("target", "_blank");
 
@@ -82,25 +96,38 @@ function populatePage(data) {
     wrapper.appendChild(link);
     container.appendChild(wrapper);
   }
-
-  var collabs = [];
-  var arr = collaborators.filter(function(el) {
-    // If it is not a duplicate, return true
-    if (collabs.indexOf(el) == -1) {
-      collabs.push(el);
-      return true;
-    }
-
-    return false;
-  });
-
-  if (collabNumber.length > 9) {
-    collabNumber.innerHTML = collabs.length;
-  } else {
-    collabNumber.innerHTML = "0" + collabs.length;
-  }
+  var loadMore = document.getElementById("loadButton");
+  loadMore.style.display = "block";
 }
 
 function fadeImage(obj) {
   obj.style.opacity = 1;
+}
+
+function loadBlocks(elem) {
+  var loader = document.getElementsByClassName("load")[0];
+  loaded++;
+
+  page = page + 8;
+
+  if (perPage + 8 >= dataFile.length) {
+    perPage = dataFile.length;
+  } else {
+    perPage = perPage + 8;
+  }
+
+  dataFile.contents.reverse();
+  pagesNeeded = Math.ceil(dataFile.length / 8);
+
+  var container = document.getElementsByClassName("link-wrapper")[0];
+  var numberOfItems = container.childElementCount;
+
+  if (loaded < pagesNeeded) {
+    populatePage(dataFile);
+  } else if (loaded == pagesNeeded) {
+    loader.style.display = "none";
+    populatePage(dataFile);
+  } else {
+    //do nothing
+  }
 }

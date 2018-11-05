@@ -27,7 +27,7 @@
 
   </head>
 
-  <body onload="loadData('design-for-privacy')">
+  <body onload="getInfo('design-for-privacy')">
 
     <div class="content-wrapper">
       <nav class="row">
@@ -55,11 +55,6 @@
           </th>
           <th>
             <p>
-              Collaborators
-            </p>
-          </th>
-          <th>
-            <p>
               Add
             </p>
           </th>
@@ -67,9 +62,6 @@
         <tr>
           <td>
             <h6 id="linkNumber">20</h6>
-          </td>
-          <td>
-            <h6 id="collabNumber">02</h6>
           </td>
           <td>
             <h6><a title="hello@ruieduardo.com" href="mailto:hello@opentools.design"><span class="open-email"></a></span></h6>
@@ -103,16 +95,19 @@
       <hr />
     </div>
 
-    <div id="loading" class="content-wrapper">
-      <div class="spinner">
-        <div class="dot1"></div>
-        <div class="dot2"></div>
-      </div>
-    </div>
-
     <div class="content-wrapper">
       <div class="row link-wrapper">
 
+      </div>
+    </div>
+
+    <div class="content-wrapper load">
+      <h6><a id="loadButton" onclick="loadBlocks()">Load More</a></h6>
+      <div class="loading">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
       </div>
     </div>
 
