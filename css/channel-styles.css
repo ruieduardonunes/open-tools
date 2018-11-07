@@ -20,6 +20,7 @@
 .channel-meta p {
   color: var(--silver);
   margin-bottom: 0;
+  text-align: left;
 }
 
 .channel-meta h6 {
@@ -28,8 +29,17 @@
   display: inline;
 }
 
-.channel-meta h6:first-child {
+.channel-meta td:last-child h6:first-child {
   margin-right: 1em;
+}
+
+.channel-meta h6 span::before {
+  vertical-align: middle;
+}
+
+.channel-meta td,
+th {
+  padding-right: 4em;
 }
 
 td span[class="open-email"]::before {
