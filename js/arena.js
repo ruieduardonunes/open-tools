@@ -45,8 +45,12 @@ function populatePage(data) {
     }
   }
 
+  updateDate(data);
+
   data.contents.reverse();
   dataFile = data;
+
+  console.log(data);
 
   collumn = document.getElementsByClassName("collumn");
 
@@ -102,6 +106,15 @@ function populatePage(data) {
 
 function fadeImage(obj) {
   obj.style.opacity = 1;
+}
+
+function updateDate(data) {
+  var timeText = document.getElementById("timeStamp");
+  var updatedAt = data.contents[data.length - 1].connected_at;
+
+  var time = timeago().format(updatedAt);
+
+  timeText.innerHTML = time;
 }
 
 function loadBlocks(elem) {
