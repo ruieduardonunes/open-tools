@@ -13,11 +13,14 @@
 #channelDescription {
   color: var(--silver);
   max-width: 48rem;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
 }
 
 .channel-meta p {
   color: var(--silver);
   margin-bottom: 0;
+  text-align: left;
 }
 
 .channel-meta h6 {
@@ -26,8 +29,17 @@
   display: inline;
 }
 
-.channel-meta h6:first-child {
+.channel-meta td:last-child h6:first-child {
   margin-right: 1em;
+}
+
+.channel-meta h6 span::before {
+  vertical-align: middle;
+}
+
+.channel-meta td,
+th {
+  padding-right: 4em;
 }
 
 td span[class="open-email"]::before {
@@ -87,6 +99,16 @@ hr {
 }
 
 .link-wrapper {
+}
+
+.load {
+  text-align: center;
+}
+
+#loadButton {
+  color: var(--accentColor);
+  text-align: center;
+  display: none;
 }
 
 .spinner {
@@ -168,6 +190,12 @@ hr {
   object-fit: cover;
   border-radius: 1px;
   float: right;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  -webkit-transition: opacity 1.6s ease;
+  -moz-transition: opacity 1.6s ease;
+  -ms-transition: opacity 1.6s ease;
+  -o-transition: opacity 1.6s ease;
 }
 
 .link-wrapper div p {
