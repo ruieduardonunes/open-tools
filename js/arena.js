@@ -19,6 +19,8 @@ function getInfo(channel) {
 }
 
 function loadData(data) {
+  "use strict";
+
   document.getElementsByClassName("loading")[0].style.display = "block";
 
   fetch(root + currentChannel + "?per=" + blocks)
@@ -35,6 +37,8 @@ function loadData(data) {
 }
 
 function populatePage(data) {
+  "use strict";
+
   var linkNumber = document.getElementById("linkNumber");
 
   if (data.length > 0) {
@@ -50,9 +54,7 @@ function populatePage(data) {
   data.contents.reverse();
   dataFile = data;
 
-  console.log(data);
-
-  collumn = document.getElementsByClassName("collumn");
+  // console.log(data);
 
   for (let i = page; i < perPage; i++) {
     var container = document.getElementsByClassName("link-wrapper")[0];
