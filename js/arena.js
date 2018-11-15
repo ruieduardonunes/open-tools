@@ -2,6 +2,7 @@ var root = "http://api.are.na/v2/channels/";
 var channel;
 
 function loadData(channel) {
+  "use strict";
   fetch(root + channel)
     .then(function(response) {
       if (response == 404) {
@@ -16,6 +17,8 @@ function loadData(channel) {
 }
 
 function populatePage(data) {
+  "use strict";
+
   var channelDescription = document.getElementById("channelDescription");
   var linkNumber = document.getElementById("linkNumber");
   var collabNumber = document.getElementById("collabNumber");
@@ -29,9 +32,7 @@ function populatePage(data) {
 
   data.contents.reverse();
 
-  console.log(data);
-
-  collumn = document.getElementsByClassName("collumn");
+  var collumn = document.getElementsByClassName("collumn");
   var collaborators = [];
 
   for (let i = 0; i < data.contents.length; i++) {
