@@ -63,11 +63,13 @@ function populatePage(data) {
     var par = document.createElement("p");
     var title = document.createElement("h6");
     var wrapper = document.createElement("div");
+    var type = document.createElement("p");
 
     link.setAttribute("target", "_blank");
 
     if (data.contents[i].source) {
       link.setAttribute("href", data.contents[i].source.url);
+      type.innerHTML = "article";
     } else if (data.contents[i].class == "Channel") {
       link.setAttribute(
         "href",
@@ -76,10 +78,13 @@ function populatePage(data) {
           "/" +
           data.contents[i].slug
       );
+      type.innerHTML = "collection";
     } else if (data.contents[i].class == "Attachment") {
       link.setAttribute("href", data.contents[i].attachment.url);
+      type.innerHTML = "document";
     } else if (data.contents[i].class == "Image") {
       link.setAttribute("href", data.contents[i].image.original.url);
+      type.innerHTML = "document";
     }
     if (data.contents[i].image) {
       image.src = data.contents[i].image.display.url;
@@ -95,13 +100,15 @@ function populatePage(data) {
     }
 
     image.setAttribute("onload", "fadeImage(this)");
+    type.classList.add("link-type");
 
     par.innerHTML = "added by" + " " + data.contents[i].connected_by_username;
     title.innerHTML = data.contents[i].title;
 
     link.appendChild(image);
-    link.appendChild(par);
+    link.appendChild(type);
     link.appendChild(title);
+    link.appendChild(par);
     wrapper.appendChild(link);
     container.appendChild(wrapper);
   }
