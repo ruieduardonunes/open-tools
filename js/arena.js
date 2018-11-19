@@ -54,7 +54,7 @@ function populatePage(data) {
   data.contents.reverse();
   dataFile = data;
 
-  // console.log(data);
+  console.log(data);
 
   for (let i = page; i < perPage; i++) {
     var container = document.getElementsByClassName("link-wrapper")[0];
@@ -83,12 +83,15 @@ function populatePage(data) {
     }
     if (data.contents[i].image) {
       image.src = data.contents[i].image.display.url;
+      image.setAttribute("alt", data.contents[i].generated_title);
     } else if (data.contents[i].class == "Channel") {
       image.src = "img/icons/link-icon.svg";
       image.style.backgroundColor = "var(--accentColor)";
+      image.setAttribute("alt", "Channel");
     } else {
       image.src = "img/icons/link-icon.svg";
       image.style.backgroundColor = "var(--accentColor)";
+      image.setAttribute("alt", "link");
     }
 
     image.setAttribute("onload", "fadeImage(this)");
