@@ -117,6 +117,7 @@ function updateDate(data) {
   var time = timeago().format(updatedAt);
 
   timeText.innerHTML = time;
+  timeText.style.opacity = 1;
 }
 
 function loadBlocks(elem) {
