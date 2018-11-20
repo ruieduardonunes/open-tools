@@ -164,9 +164,11 @@ nav a {
   order: -1;
 }
 
-footer {
-  margin-bottom: 8rem;
-  margin-top: 20rem;
+footer.content-wrapper {
+  margin-bottom: 6rem;
+  margin-top: 18rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--paleSilver);
 }
 
 footer p {
