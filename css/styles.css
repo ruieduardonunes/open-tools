@@ -11,8 +11,8 @@ body {
   /*Color*/
   --backgroundColor: #fff;
   --black: #000;
-  --silver: #a2a1a1;
-  --lightGray: #b4b3b3;
+  --silver: #757575;
+  --paleSilver: #eef0f2;
   --blue: #398bff;
   --orange: #f77a37;
   --rose: #cd6e8c;
@@ -170,14 +170,14 @@ footer {
 }
 
 footer p {
-  color: var(--silver);
+  color: var(--black);
   margin: 0;
   margin-right: 1em;
   display: inline;
 }
 
 footer a {
-  color: var(--silver);
+  color: var(--black);
   font-size: 1.6em;
   line-height: 3rem;
   font-family: "ff-real-text-pro", sans-serif;

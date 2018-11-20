@@ -74,7 +74,7 @@
 
 hr {
   border: none;
-  border-bottom: 0.5px solid var(--lightGray);
+  border-bottom: 1px solid var(--paleSilver);
   margin-top: 6em;
   margin-bottom: calc(8 * var(--grid));
 }
@@ -206,7 +206,8 @@ hr {
   height: 10vw;
   margin: 0 auto;
   object-fit: cover;
-  border-radius: 1px;
+  border-radius: 4px;
+  border: 1px solid var(--paleSilver);
   float: right;
   opacity: 0;
   transition: opacity 1.6s ease;
