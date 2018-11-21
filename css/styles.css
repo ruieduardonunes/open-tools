@@ -11,7 +11,7 @@ body {
   /*Color*/
   --backgroundColor: #fff;
   --black: #000;
-  --silver: #757575;
+  --silver: #666;
   --paleSilver: #eef0f2;
   --blue: #398bff;
   --orange: #f77a37;
@@ -90,7 +90,8 @@ nav {
 
 nav a {
   color: var(--black);
-  font-family: "ff-real-text-pro", sans-serif;
+  font-family: "ff-real-headline-pro", sans-serif;
+  font-weight: 500;
   margin-right: 2em;
   font-size: 0.8em;
 }
@@ -122,12 +123,28 @@ nav a {
 /*Home Page*/
 
 #heroWelcome {
-  max-width: 56rem;
+  max-width: 60rem;
   display: flex;
   min-height: 48vh;
   align-items: center;
   align-content: center;
-  padding-top: 80px;
+  padding-top: 160px;
+  padding-bottom: 32px;
+  animation-name: fadeIn;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+#heroWelcome h2 span {
+  color: var(--silver);
+}
+
+.content * {
+  animation-name: fadeIn;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
 .collumn > div {
@@ -189,4 +206,13 @@ footer a {
 
 #about {
   display: inline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
