@@ -58,21 +58,21 @@
     line-height: 1.5;
   }
 
-  .link-wrapper div {
+  .link-wrapper-content {
     width: 100%;
   }
 
-  .link-wrapper div img {
+  .link-wrapper-content div:nth-child(1) {
     width: 32vw;
     height: 32vw;
   }
 
-  .link-wrapper div p {
+  .link-wrapper-content p {
     max-width: 50vw;
     font-size: 2em;
   }
 
-  .link-wrapper div h6 {
+  .link-wrapper-content h6 {
     max-width: 40vw;
     line-height: 1.3;
   }
