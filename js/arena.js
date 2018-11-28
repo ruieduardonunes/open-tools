@@ -63,6 +63,8 @@ function populatePage(data) {
     var par = document.createElement("p");
     var title = document.createElement("h6");
     var wrapper = document.createElement("div");
+    var imageWrapper = document.createElement("div");
+    var contentWrapper = document.createElement("div");
     var type = document.createElement("p");
 
     link.setAttribute("target", "_blank");
@@ -101,14 +103,17 @@ function populatePage(data) {
 
     image.setAttribute("onload", "fadeImage(this)");
     type.classList.add("link-type");
+    wrapper.classList.add("link-wrapper-content");
 
     par.innerHTML = "added by" + " " + data.contents[i].connected_by_username;
     title.innerHTML = data.contents[i].title;
 
-    link.appendChild(image);
-    link.appendChild(type);
-    link.appendChild(title);
-    link.appendChild(par);
+    imageWrapper.appendChild(image);
+    link.appendChild(imageWrapper);
+    contentWrapper.appendChild(type);
+    contentWrapper.appendChild(title);
+    contentWrapper.appendChild(par);
+    link.appendChild(contentWrapper);
     wrapper.appendChild(link);
     container.appendChild(wrapper);
   }
