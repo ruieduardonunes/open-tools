@@ -251,7 +251,8 @@ hr {
   margin-bottom: 24px;
   color: var(--black);
   text-transform: capitalize;
-  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-line;
 }
 
 .link-wrapper div p.link-type {
