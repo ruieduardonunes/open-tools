@@ -124,6 +124,12 @@ hr {
   color: var(--accentColor);
 }
 
+.rights {
+  font-size: 0.72em;
+  line-height: 0.4;
+  opacity: 0.48;
+}
+
 .load {
   text-align: center;
 }
