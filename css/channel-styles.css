@@ -81,11 +81,17 @@ hr {
 
 .featured-image {
   width: calc(48% - 2px);
-  border-radius: 2px;
+  border-radius: 8px;
   height: 64vh;
   background-size: cover;
   background-position: center;
   border: 1px solid var(--paleSilver);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  transition: 400ms ease;
+}
+
+.featured-image:hover {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0);
 }
 
 .featured-content {
@@ -116,6 +122,12 @@ hr {
   font-size: 1.8em;
   font-family: "ff-real-text-pro", sans-serif;
   color: var(--accentColor);
+}
+
+.rights {
+  font-size: 0.72em;
+  line-height: 0.4;
+  opacity: 0.48;
 }
 
 .load {
