@@ -60,7 +60,6 @@ function populatePage(data) {
     var container = document.getElementsByClassName("link-wrapper")[0];
     var link = document.createElement("a");
     var image = document.createElement("img");
-    var par = document.createElement("p");
     var title = document.createElement("h6");
     var wrapper = document.createElement("div");
     var imageWrapper = document.createElement("div");
@@ -105,14 +104,12 @@ function populatePage(data) {
     type.classList.add("link-type");
     wrapper.classList.add("link-wrapper-content");
 
-    par.innerHTML = "added by" + " " + data.contents[i].connected_by_username;
     title.innerHTML = data.contents[i].title;
 
     imageWrapper.appendChild(image);
     link.appendChild(imageWrapper);
     contentWrapper.appendChild(type);
     contentWrapper.appendChild(title);
-    contentWrapper.appendChild(par);
     link.appendChild(contentWrapper);
     wrapper.appendChild(link);
     container.appendChild(wrapper);

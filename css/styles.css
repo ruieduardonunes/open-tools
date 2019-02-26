@@ -120,6 +120,10 @@ nav a {
   white-space: nowrap;
 }
 
+#page-title span {
+  padding-left: 4px;
+}
+
 /*Home Page*/
 
 #heroWelcome {
