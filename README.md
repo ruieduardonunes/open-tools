@@ -1,5 +1,7 @@
 # opentools.design
 
+![open-tools.design](https://opentools.design/img/sharing/media-twitter.jpg "open-tools.design")
+
 We’re opentools.design, an open community of designers and makers. Here, we’ll share inspiring tools, articles, and thought-provoking pieces that ignite our hearts and minds in the designing of a better future.
 
 > “People ask me to predict the future, when all I want to do is prevent it. Better yet, build it. Predicting the future is much too easy, anyway. You look at the people around you, the street you stand on, the visible air you breathe, and predict more of the same. To hell with more. I want better.”
