@@ -5,6 +5,8 @@ var loaded = 1;
 var blocks;
 var currentChannel;
 var dataFile = {};
+var contributors = [];
+var names = [];
 
 function getInfo(channel) {
   currentChannel = channel;
@@ -27,12 +29,16 @@ function loadData(data) {
     .then(function(response) {
       if (response == 404) {
         document.getElementsByClassName("loading")[0].style.display = "none";
+        document.getElementsByClassName("ghost")[0].style.display = "none";
+        document.getElementsByClassName("ghost")[1].style.display = "none";
       }
       return response.json();
     })
     .then(function(data) {
       populatePage(data);
       document.getElementsByClassName("loading")[0].style.display = "none";
+      document.getElementsByClassName("ghost")[0].style.display = "none";
+      document.getElementsByClassName("ghost")[1].style.display = "none";
     });
 }
 
@@ -55,6 +61,60 @@ function populatePage(data) {
   dataFile = data;
 
   console.log(data);
+
+  function getContributors(data, contributors) {
+    for (var i = 0; i < data.contents.length; i++) {
+      contributors.push(data.contents[i].user.avatar_image.thumb);
+      names.push(data.contents[i].connected_by_user_slug);
+      console.log(names);
+    }
+    uniqueContributors(contributors, names);
+  }
+
+  function uniqueContributors(contributors, names) {
+    var userWrapper = document.getElementById("contributorWrapper");
+    let uniqueContributors = [...new Set(contributors)];
+    let uniqueNames = [...new Set(names)];
+
+    for (var i = 0; i < uniqueNames.length; i++) {
+      if (i < 4) {
+        var userLink = document.createElement("a");
+        var user = document.createElement("div");
+        userLink.setAttribute("href", "https://are.na/" + uniqueNames[i]);
+        userLink.setAttribute("target", "_blank");
+        user.setAttribute("class", "contributors");
+        user.setAttribute("title", uniqueNames[i]);
+
+        if (uniqueContributors[i].includes("blank")) {
+          user.innerHTML = "<span class=" + "open-star" + "></span>";
+        } else {
+          user.style.backgroundImage = "url(" + uniqueContributors[i] + ")";
+        }
+
+        userLink.appendChild(user);
+        userWrapper.appendChild(userLink);
+      } else {
+        var userLink = document.createElement("a");
+        var user = document.createElement("div");
+        userLink.setAttribute(
+          "href",
+          "https://are.na/rui-nunes/" + currentChannel
+        );
+        userLink.setAttribute("target", "_blank");
+        user.setAttribute("class", "contributors");
+        user.setAttribute("title", "are.na");
+        user.style.backgroundColor = "var(--paleSilver)";
+
+        user.innerHTML = "<p> +" + (uniqueNames.length - 3) + "</p>";
+        i = uniqueNames.lenght;
+
+        userLink.appendChild(user);
+        userWrapper.appendChild(userLink);
+      }
+    }
+  }
+
+  getContributors(data, contributors);
 
   for (let i = page; i < perPage; i++) {
     var container = document.getElementsByClassName("link-wrapper")[0];

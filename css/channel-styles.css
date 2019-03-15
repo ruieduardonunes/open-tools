@@ -20,11 +20,61 @@
 .channel-meta .collumn {
   display: inline-grid;
   width: auto;
-  margin-left: 4em;
+  margin-left: 5.6em;
 }
 
 .channel-meta .collumn:first-child {
   margin-left: 0;
+}
+
+.contributor-row {
+  justify-content: flex-start;
+  min-width: 112px;
+}
+
+.contributors {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  margin-right: 4px;
+  margin-top: 4px;
+  background-size: contain;
+  border: 1px solid var(--paleSilver);
+  background-color: white;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.contributors.ghost {
+  background-color: var(--paleSilver);
+  animation-name: ghost;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes ghost {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.contributors span.open-star {
+  padding-left: 6px;
+  margin-top: 6px;
+  vertical-align: middle;
+  position: absolute;
+}
+
+.contributors p {
+  padding: 0;
+  margin: 0 auto;
+  vertical-align: middle;
+  line-height: 20px;
+  color: var(--silver);
 }
 
 .add-options h6 a {

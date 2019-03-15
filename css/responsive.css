@@ -58,6 +58,10 @@
     line-height: 1.5;
   }
 
+  #channel-users {
+    display: none;
+  }
+
   .link-wrapper-content {
     width: 100%;
   }
