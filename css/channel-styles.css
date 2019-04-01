@@ -233,11 +233,12 @@ hr {
   border-radius: 4px;
   border: 1px solid var(--paleSilver);
   opacity: 0;
-  transition: opacity 1.6s ease;
-  -webkit-transition: opacity 1.6s ease;
-  -moz-transition: opacity 1.6s ease;
-  -ms-transition: opacity 1.6s ease;
-  -o-transition: opacity 1.6s ease;
+  transform: scale(0.96);
+  transition: all 1.6s ease;
+  -webkit-transition: all 1.6s ease;
+  -moz-transition: all 1.6s ease;
+  -ms-transition: all 1.6s ease;
+  -o-transition: all 1.6s ease;
 }
 
 .link-wrapper-content p {

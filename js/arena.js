@@ -180,6 +180,7 @@ function populatePage(data) {
 
 function fadeImage(obj) {
   obj.style.opacity = 1;
+  obj.style.transform = "scale(1.0)";
 }
 
 function updateDate(data) {
