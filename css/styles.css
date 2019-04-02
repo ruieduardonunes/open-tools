@@ -11,7 +11,7 @@ body {
   /*Color*/
   --backgroundColor: #fff;
   --black: #16161d;
-  --silver: #666;
+  --silver: rgba(22, 22, 29, 0.56);
   --paleSilver: #eef0f2;
   --blue: #398bff;
   --orange: #f77a37;
