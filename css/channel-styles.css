@@ -90,6 +90,10 @@
   color: var(--accentColor);
 }
 
+.add-options h6 a span {
+  color: var(--accentColor);
+}
+
 .add-options h6:first-child {
   margin-right: 1.2em;
 }
@@ -127,7 +131,7 @@
   color: var(--accentColor);
 }
 
-.channel-meta span[class="open-star"]::before {
+.channel-meta span[class="open-add"]::before {
   color: var(--accentColor);
 }
 
