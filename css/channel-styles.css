@@ -135,6 +135,10 @@
   color: var(--accentColor);
 }
 
+.channel-meta span[class="open-star"]::before {
+  color: var(--accentColor);
+}
+
 hr {
   border: none;
   border-bottom: 1px solid var(--paleSilver);
