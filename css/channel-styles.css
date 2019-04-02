@@ -151,7 +151,7 @@ hr {
 }
 
 .featured-image {
-  width: calc(48% - 2px);
+  width: calc(46% - 2px);
   border-radius: 8px;
   height: 64vh;
   background-size: cover;
@@ -166,8 +166,8 @@ hr {
 }
 
 .featured-content {
-  width: 40%;
-  margin-left: 12%;
+  width: 46%;
+  margin-left: 6%;
 }
 
 .featured-content p {
@@ -219,7 +219,7 @@ hr {
 }
 
 .link-wrapper-content {
-  width: 40%;
+  width: 46%;
   margin-bottom: 10vh;
 }
 
