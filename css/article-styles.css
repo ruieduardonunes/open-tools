@@ -18,6 +18,13 @@
   background-position: center;
 }
 
+.article-image {
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  box-sizing: border-box;
+}
+
 #author {
   color: var(--silver);
   padding-top: 1.4em;
@@ -139,18 +146,5 @@
 
   #author {
     padding-top: 0;
-  }
-
-  footer {
-    margin-bottom: 12rem;
-  }
-
-  footer a {
-    color: var(--silver);
-    font-size: 2.72em;
-  }
-
-  footer div:last-child {
-    margin-top: 2em;
   }
 }

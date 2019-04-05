@@ -27,7 +27,9 @@ function navBarUpdate() {
       }
     }
     var x = window.matchMedia("(max-width: 510px)");
-    mobile(x);
+    if (pageLogo) {
+      mobile(x);
+    }
     x.addListener(mobile);
   }
 }
@@ -35,3 +37,10 @@ function navBarUpdate() {
 window.onscroll = function() {
   navBarUpdate();
 };
+
+function openDat() {
+  var path = window.location.pathname;
+  var myURL = "dat://opentools.hashbase.io" + path;
+
+  window.open(myURL, "_blank");
+}

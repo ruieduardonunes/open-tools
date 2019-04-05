@@ -60,13 +60,13 @@ function populatePage(data) {
   data.contents.reverse();
   dataFile = data;
 
-  console.log(data);
+  // console.log(data);
 
   function getContributors(data, contributors) {
     for (var i = 0; i < data.contents.length; i++) {
       contributors.push(data.contents[i].user.avatar_image.thumb);
       names.push(data.contents[i].connected_by_user_slug);
-      console.log(names);
+      // console.log(names);
     }
     uniqueContributors(contributors, names);
   }
