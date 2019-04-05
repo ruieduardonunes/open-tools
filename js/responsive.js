@@ -35,3 +35,10 @@ function navBarUpdate() {
 window.onscroll = function() {
   navBarUpdate();
 };
+
+function openDat() {
+  var path = window.location.pathname;
+  var myURL = "dat://opentools.hashbase.io" + path;
+
+  window.open(myURL, "_blank");
+}

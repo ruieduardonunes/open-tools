@@ -212,6 +212,29 @@ footer a {
   display: inline;
 }
 
+.p2p {
+  color: var(--silver);
+}
+
+.p2p a {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.open-dat {
+}
+
+.open-dat a {
+  color: var(--silver);
+  font-size: 1.6rem;
+  margin: 0;
+  background: var(--paleSilver);
+  padding: 0 4px 0 4px;
+  border-radius: 3px;
+  text-decoration: none;
+  vertical-align: top;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
