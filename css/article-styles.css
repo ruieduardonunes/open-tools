@@ -18,6 +18,13 @@
   background-position: center;
 }
 
+.article-image {
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  box-sizing: border-box;
+}
+
 #author {
   color: var(--silver);
   padding-top: 1.4em;
