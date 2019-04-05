@@ -27,7 +27,9 @@ function navBarUpdate() {
       }
     }
     var x = window.matchMedia("(max-width: 510px)");
-    mobile(x);
+    if (pageLogo) {
+      mobile(x);
+    }
     x.addListener(mobile);
   }
 }
