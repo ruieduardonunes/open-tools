@@ -127,7 +127,6 @@ function populatePage(data) {
     var type = document.createElement("p");
 
     link.setAttribute("target", "_blank");
-
     if (data.contents[i].source) {
       link.setAttribute("href", data.contents[i].source.url);
       type.innerHTML = "article";
