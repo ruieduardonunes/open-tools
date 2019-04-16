@@ -86,6 +86,26 @@
   margin-top: 10rem;
 }
 
+.article-content h4 {
+  font-family: "ff-real-text-pro", sans-serif;
+  font-size: 2.1328em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0em;
+  line-height: 1.32;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.article-content blockquote {
+  margin-bottom: 8rem;
+  margin-top: 6rem;
+}
+
+.article-content blockquote p {
+  line-height: 1.4;
+}
+
 .article-content sup {
   padding-right: 4px;
 }
