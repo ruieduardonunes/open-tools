@@ -7,6 +7,7 @@ var currentChannel;
 var dataFile = {};
 var contributors = [];
 var names = [];
+var namesLoaded = false;
 
 function getInfo(channel) {
   currentChannel = channel;
@@ -44,6 +45,7 @@ function loadData(data) {
 
 function populatePage(data) {
   "use strict";
+  console.log(data);
 
   var linkNumber = document.getElementById("linkNumber");
 
@@ -60,14 +62,13 @@ function populatePage(data) {
   data.contents.reverse();
   dataFile = data;
 
-  // console.log(data);
-
   function getContributors(data, contributors) {
     for (var i = 0; i < data.contents.length; i++) {
       contributors.push(data.contents[i].user.avatar_image.thumb);
       names.push(data.contents[i].connected_by_user_slug);
       // console.log(names);
     }
+    namesLoaded = true;
     uniqueContributors(contributors, names);
   }
 
@@ -114,7 +115,9 @@ function populatePage(data) {
     }
   }
 
-  getContributors(data, contributors);
+  if (namesLoaded == false) {
+    getContributors(data, contributors);
+  }
 
   for (let i = page; i < perPage; i++) {
     var container = document.getElementsByClassName("link-wrapper")[0];
@@ -127,10 +130,7 @@ function populatePage(data) {
     var type = document.createElement("p");
 
     link.setAttribute("target", "_blank");
-    if (data.contents[i].source) {
-      link.setAttribute("href", data.contents[i].source.url);
-      type.innerHTML = "article";
-    } else if (data.contents[i].class == "Channel") {
+    if (data.contents[i].class == "Channel") {
       link.setAttribute(
         "href",
         "https://www.are.na/" +
@@ -145,7 +145,11 @@ function populatePage(data) {
     } else if (data.contents[i].class == "Image") {
       link.setAttribute("href", data.contents[i].image.original.url);
       type.innerHTML = "document";
+    } else if (data.contents[i].source) {
+      link.setAttribute("href", data.contents[i].source.url);
+      type.innerHTML = "article";
     }
+
     if (data.contents[i].image) {
       image.src = data.contents[i].image.display.url;
       image.setAttribute("alt", data.contents[i].generated_title);
