@@ -88,6 +88,11 @@
     background-position: center;
   }
 
+  .rights {
+    font-size: 1.6em;
+    margin-top: 49vh;
+  }
+
   .featured-content {
     width: 100%;
     margin-left: 0;
