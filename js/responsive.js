@@ -15,7 +15,7 @@ function navBarUpdate() {
   }
   //BOTTOM
   if (pageHero.getBoundingClientRect().bottom <= 0) {
-    nav.style.borderBottom = "1px solid rgba(242, 242, 242, 1)";
+    nav.style.borderBottom = "1px solid var(--paleSilver)";
 
     if (pageTitle && pageLogo) {
       pageTitle.style.opacity = 1;

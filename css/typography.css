@@ -91,7 +91,7 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: var(--silver);
 }
 
 p a {
