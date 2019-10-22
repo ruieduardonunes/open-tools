@@ -20,6 +20,17 @@ body {
   --gold: #f8be04;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grid: 8px;
+    /*Color*/
+    --backgroundColor: black;
+    --black: #f2f2f2;
+    --silver: rgba(235, 235, 245, 0.6);
+    --paleSilver: rgba(235, 235, 245, 0.18);
+  }
+}
+
 body {
   background-color: var(--backgroundColor);
   color: var(--black);
