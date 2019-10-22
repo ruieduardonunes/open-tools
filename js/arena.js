@@ -17,6 +17,7 @@ function getInfo(channel) {
     })
     .then(function(data) {
       blocks = data.length;
+      console.log(data);
       loadData(data);
     });
 }
