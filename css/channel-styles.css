@@ -166,6 +166,7 @@ hr {
   position: relative;
   display: flex;
   flex-direction: column;
+  background-repeat: no-repeat;
 }
 
 #animatedIllustration {
