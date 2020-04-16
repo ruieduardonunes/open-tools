@@ -8,17 +8,32 @@ var dataFile = {};
 var contributors = [];
 var names = [];
 var namesLoaded = false;
+let uniqueNames = [];
+let uniqueContributors = [];
 
 function getInfo(channel) {
   currentChannel = channel;
   fetch(root + channel)
-    .then(function(response) {
+    .then(function (response) {
       return response.json();
     })
-    .then(function(data) {
-      blocks = data.length;
-      console.log(data);
+    .then(function (data) {
       loadData(data);
+    });
+}
+
+function getUsers(userID, done) {
+  fetch("http://api.are.na/v2/users/" + userID)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      uniqueContributors.push(data.avatar_image.thumb);
+    })
+    .then(function () {
+      if (uniqueNames.length === uniqueContributors.length) {
+        done(uniqueNames);
+      }
     });
 }
 
@@ -28,7 +43,7 @@ function loadData(data) {
   document.getElementsByClassName("loading")[0].style.display = "block";
 
   fetch(root + currentChannel + "?per=" + blocks)
-    .then(function(response) {
+    .then(function (response) {
       if (response == 404) {
         document.getElementsByClassName("loading")[0].style.display = "none";
         document.getElementsByClassName("ghost")[0].style.display = "none";
@@ -36,7 +51,7 @@ function loadData(data) {
       }
       return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
       populatePage(data);
       document.getElementsByClassName("loading")[0].style.display = "none";
       document.getElementsByClassName("ghost")[0].style.display = "none";
@@ -46,7 +61,6 @@ function loadData(data) {
 
 function populatePage(data) {
   "use strict";
-  console.log(data);
 
   var linkNumber = document.getElementById("linkNumber");
 
@@ -65,20 +79,22 @@ function populatePage(data) {
 
   function getContributors(data, contributors) {
     for (var i = 0; i < data.contents.length; i++) {
-      contributors.push(data.contents[i].user.avatar_image.thumb);
-      names.push(data.contents[i].connected_by_user_slug);
-      // console.log(names);
+      names.push(data.contents[i].connected_by_user_id);
     }
     namesLoaded = true;
-    uniqueContributors(contributors, names);
+    uniqueNames = [...new Set(names)];
+
+    for (let i = 0; i < uniqueNames.length; i++) {
+      getUsers(uniqueNames[i], addUniqueContributors);
+    }
   }
 
-  function uniqueContributors(contributors, names) {
+  function addUniqueContributors(names) {
     var userWrapper = document.getElementById("contributorWrapper");
-    let uniqueContributors = [...new Set(contributors)];
-    let uniqueNames = [...new Set(names)];
 
-    for (var i = 0; i < uniqueNames.length; i++) {
+    console.log(uniqueContributors);
+
+    for (var i = 0; i < uniqueContributors.length; i++) {
       if (i < 4) {
         var userLink = document.createElement("a");
         var user = document.createElement("div");
@@ -189,7 +205,7 @@ function fadeImage(obj) {
 
 function updateDate(data) {
   var timeText = document.getElementById("timeStamp");
-  var updatedAt = data.contents[data.length - 1].connected_at;
+  var updatedAt = data.contents[data.contents.length - 1].connected_at;
 
   var time = timeago().format(updatedAt);
 
