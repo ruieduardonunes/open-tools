@@ -59,7 +59,7 @@
   animation-name: ghost;
   animation-iteration-count: infinite;
   animation-duration: 1s;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out-in;
 }
 
 @keyframes ghost {
@@ -108,11 +108,11 @@
 
 #timeStamp {
   opacity: 0;
-  transition: opacity 600ms ease;
-  -webkit-transition: opacity 600ms ease;
-  -moz-transition: opacity 600ms ease;
-  -ms-transition: opacity 600ms ease;
-  -o-transition: opacity 600ms ease;
+  transition: opacity 600ms ease-in-out;
+  -webkit-transition: opacity 600ms ease-in-out;
+  -moz-transition: opacity 600ms ease-in-out;
+  -ms-transition: opacity 600ms ease-in-out;
+  -o-transition: opacity 600ms ease-in-out;
 }
 
 .channel-meta p {
@@ -162,7 +162,7 @@ hr {
   background-position: center;
   border: 1px solid var(--paleSilver);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
-  transition: 400ms ease;
+  transition: 400ms ease-in-out;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -252,6 +252,15 @@ hr {
   text-decoration: underline;
 }
 
+.link-wrapper-content a:hover div:first-of-type {
+  transform: scale(1.02);
+  transition: all 0.4s ease-in-out-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
 .link-wrapper-content div:nth-child(1) {
   width: 12vw;
   height: 12vw;
@@ -268,11 +277,11 @@ hr {
   border: 1px solid var(--paleSilver);
   opacity: 0;
   transform: scale(0.96);
-  transition: all 1.6s ease;
-  -webkit-transition: all 1.6s ease;
-  -moz-transition: all 1.6s ease;
-  -ms-transition: all 1.6s ease;
-  -o-transition: all 1.6s ease;
+  transition: all 1.6s ease-in-out;
+  -webkit-transition: all 1.6s ease-in-out;
+  -moz-transition: all 1.6s ease-in-out;
+  -ms-transition: all 1.6s ease-in-out;
+  -o-transition: all 1.6s ease-in-out;
 }
 
 .link-wrapper-content p {
