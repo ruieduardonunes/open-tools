@@ -23,7 +23,7 @@ function getInfo(channel) {
 }
 
 function getUsers(userID, done) {
-  fetch("http://api.are.na/v2/users/" + userID)
+  fetch("https://api.are.na/v2/users/" + userID)
     .then(function (response) {
       return response.json();
     })
