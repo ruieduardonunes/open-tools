@@ -143,6 +143,7 @@ function populatePage(data) {
 		var link = document.createElement("a");
 		var image = document.createElement("img");
 		var title = document.createElement("h6");
+		var description = document.createElement("p");
 		var wrapper = document.createElement("div");
 		var imageWrapper = document.createElement("div");
 		var contentWrapper = document.createElement("div");
