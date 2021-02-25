@@ -28,7 +28,7 @@ function getUsers(userID, done) {
 			return response.json();
 		})
 		.then(function (data) {
-			uniqueContributors.push(data.avatar_image.thumb);
+			uniqueContributors.push(data);
 		})
 		.then(function () {
 			if (uniqueNames.length === uniqueContributors.length) {
@@ -74,8 +74,6 @@ function populatePage(data) {
 		}
 	}
 
-	//updateDate(data);
-
 	data.contents.reverse();
 	dataFile = data;
 
@@ -84,6 +82,7 @@ function populatePage(data) {
 			names.push(data.contents[i].connected_by_user_id);
 		}
 		namesLoaded = true;
+		uniqueNames = [];
 		uniqueNames = [...new Set(names)];
 
 		for (let i = 0; i < uniqueNames.length; i++) {
@@ -92,23 +91,26 @@ function populatePage(data) {
 	}
 
 	function addUniqueContributors(names) {
-		var userWrapper = document.getElementById("contributorWrapper");
-
 		console.log(uniqueContributors);
+		var userWrapper = document.getElementById("contributorWrapper");
 
 		for (var i = 0; i < uniqueContributors.length; i++) {
 			if (i < 4) {
 				var userLink = document.createElement("a");
 				var user = document.createElement("div");
-				userLink.setAttribute("href", "https://are.na/" + uniqueNames[i]);
+				userLink.setAttribute(
+					"href",
+					"https://are.na/" + uniqueContributors[i].slug
+				);
 				userLink.setAttribute("target", "_blank");
 				user.setAttribute("class", "contributors");
 				user.setAttribute("title", uniqueNames[i]);
 
-				if (uniqueContributors[i].includes("blank")) {
+				if (uniqueContributors[i].avatar_image.thumb.includes("blank")) {
 					user.innerHTML = "<span class=" + "open-star" + "></span>";
 				} else {
-					user.style.backgroundImage = "url(" + uniqueContributors[i] + ")";
+					user.style.backgroundImage =
+						"url(" + uniqueContributors[i].avatar_image.thumb + ")";
 				}
 
 				userLink.appendChild(user);
@@ -143,6 +145,7 @@ function populatePage(data) {
 		var link = document.createElement("a");
 		var image = document.createElement("img");
 		var title = document.createElement("h6");
+		var description = document.createElement("p");
 		var wrapper = document.createElement("div");
 		var imageWrapper = document.createElement("div");
 		var contentWrapper = document.createElement("div");
