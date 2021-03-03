@@ -23,6 +23,15 @@
 		flex-wrap: wrap;
 	}
 
+	@keyframes Background {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: -168px 0;
+		}
+	}
+
 	.channel:hover > .open-icon {
 		animation: none;
 	}
