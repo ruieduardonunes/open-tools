@@ -178,6 +178,11 @@ nav a {
 	flex-wrap: nowrap;
 }
 
+.channel:hover > .open-icon {
+	animation: Background 0.7s steps(3);
+	animation-iteration-count: infinite;
+}
+
 .channel * {
 	margin-left: 0;
 	margin-right: 0;
@@ -186,6 +191,63 @@ nav a {
 .channel-image {
 	font-size: calc(11 * var(--grid));
 	width: calc(11 * var(--grid));
+}
+
+.open-icon {
+	width: calc(var(--grid) * 10);
+	height: calc(var(--grid) * 10);
+	animation: none;
+	flex-shrink: 0;
+	background-position: 0 0;
+}
+
+.star {
+	background: url(/img/animations/star-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+.home {
+	background: url(/img/animations/home-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+.eye {
+	background: url(/img/animations/eye-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+.heart {
+	background: url(/img/animations/heart-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+.coffee {
+	background: url(/img/animations/coffee-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+.arena {
+	background: url(/img/animations/arena-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+.pen {
+	background: url(/img/animations/pen-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+.chat {
+	background: url(/img/animations/chat-animation.svg) no-repeat;
+	background-size: cover;
+}
+
+@keyframes Background {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -240px 0;
+	}
 }
 
 .image-left {
