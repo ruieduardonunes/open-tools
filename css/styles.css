@@ -201,6 +201,11 @@ nav a {
 	background-position: 0 0;
 }
 
+.animate {
+	animation: Background 0.7s steps(3);
+	animation-iteration-count: 4;
+}
+
 .star {
 	background: url(/img/animations/star-animation.svg) no-repeat;
 	background-size: cover;
