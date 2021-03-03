@@ -23,6 +23,10 @@
 		flex-wrap: wrap;
 	}
 
+	.channel:hover > .open-icon {
+		animation: none;
+	}
+
 	.image-left {
 		transform: none;
 	}
