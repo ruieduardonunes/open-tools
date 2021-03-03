@@ -91,7 +91,6 @@ function populatePage(data) {
 	}
 
 	function addUniqueContributors(names) {
-		console.log(uniqueContributors);
 		var userWrapper = document.getElementById("contributorWrapper");
 
 		for (var i = 0; i < uniqueContributors.length; i++) {
